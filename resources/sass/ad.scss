@@ -1,0 +1,32 @@
+.ad {
+  border-radius: .25rem;
+  border: 1px solid #eee;
+  border-left-width: .25rem;
+  border-left-color: $blue;
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+
+  &#{_title} {
+    padding-right: 20px;
+  }
+
+  &#{_link} {
+    color: $blue;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  &#{_info} {
+    display: flex;
+    font-size: 0.8em;
+    margin-top: 10px;
+    color: $text-muted;
+
+    .created {
+      margin-right: 10px;
+    }
+  }
+}
