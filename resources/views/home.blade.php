@@ -105,14 +105,15 @@
                 </main>
                 <aside class="col-4">
                     <form action="/login" class="user" method="post">
+                        {{ csrf_field() }}
                         <div class="form-group">
                             <label for="username">Username</label>
-                            <input type="text" class="form-control" id="username">
+                            <input type="text" class="form-control" id="username" name="username">
                             <small id="username_error" class="form-text text-danger"></small>
                         </div>
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password">
+                            <input type="password" class="form-control" id="password" name="password">
                             <small id="password_error" class="form-text text-danger"></small>
                         </div>
                         <button type="submit" class="btn btn-primary">Login</button>
