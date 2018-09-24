@@ -6,7 +6,7 @@
 
         <title>Ads Board</title>
 
-        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     </head>
     <body>
         <div class="container">
@@ -99,20 +99,11 @@
                     </nav>
                 </main>
                 <aside class="col-4">
-                    <form action="/login" class="user" method="post">
-                        {{ csrf_field() }}
-                        <div class="form-group">
-                            <label for="username">Username</label>
-                            <input type="text" class="form-control" id="username" name="name">
-                            <small id="username_error" class="form-text text-danger"></small>
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password" name="password">
-                            <small id="password_error" class="form-text text-danger"></small>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Login</button>
-                    </form>
+                    @guest
+                        @include('auth.auth_form')
+                    @else
+                        @include('user.info')
+                    @endguest
                 </aside>
             </div>
         </div>

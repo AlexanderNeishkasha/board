@@ -25,14 +25,19 @@ Route::get('/edit', function () {
 })->middleware('auth');
 
 //Авторизация и регистрация
-Route::post('login', function(Request $request) {
-
+Route::post('login', function(Request $request) {;
     //Если пользователя не существует - зарегистрировать его
-    if (\App\User::where('name', $request->input('username'))->count() == 0)
+    if (\App\User::where('name', $request->input('name'))->count() == 0)
         App::call('App\Http\Controllers\Auth\RegisterController@register');
     Auth::attempt([
         'name' => $request->input('name'),
         'password' => $request->input('password')
     ]);
     return redirect()->intended('/');
+});
+
+//Выход
+Route::get('logout', function() {
+   Auth::logout();
+   return redirect()->intended('/');
 });

@@ -10518,9 +10518,39 @@ a.text-dark:focus {
 .user {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
+  border: 1px solid #eee;
 }
 
 .user .btn {
   color: white;
+}
+
+.user--info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 15px;
+  text-align: center;
+}
+
+.user_name {
+  margin-bottom: 20px;
+}
+
+.user_actions {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
