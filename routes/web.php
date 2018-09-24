@@ -37,13 +37,11 @@ Route::get('logout', function() {
    return redirect()->intended('/');
 });
 
+//Страница объявления
+Route::get('/{id}', 'AdController@show')->where('id', '[0-9]+');
 
 //Форма добавления объявления
-Route::get('/edit', function () {
-    return view('edit');
-})->middleware('auth');
+Route::get('/edit', 'AdController@edit')->middleware('auth');
 
 //Добавление объявления
-Route::post('/add', function(Request $request) {
-
-})->middleware('auth');
+Route::post('/add', 'AdController@add')->middleware('auth');

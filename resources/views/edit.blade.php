@@ -13,7 +13,7 @@
 
                     <div class="form-group">
                         <label for="title">Title</label>
-                        <input type="text" class="form-control" id="title" name="title">
+                        <input type="text" class="form-control" id="title" name="title" value="{{ old('title') }}">
                         @if ($errors->has('title'))
                             <small id="title_error" class="form-text text-danger">
                                 {{ $errors->first('title') }}
@@ -22,7 +22,7 @@
                     </div>
                     <div class="form-group">
                         <label for="description">Description</label>
-                        <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+                        <textarea class="form-control" id="description" name="description" rows="3">{{ old('description') }}</textarea>
                         @if ($errors->has('description'))
                                 <small id="description_error" class="form-text text-danger">
                                     {{ $errors->first('description') }}
