@@ -10565,3 +10565,25 @@ a.text-dark:focus {
   resize: none;
 }
 
+.adpage {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.adpage_title {
+  color: #5bc0de;
+}
+
+.adpage_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.8em;
+  margin-top: 10px;
+  color: #6c757d;
+}
+
+.adpage_info .created {
+  margin-right: 10px;
+}
+
