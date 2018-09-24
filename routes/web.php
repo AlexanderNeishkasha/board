@@ -16,13 +16,9 @@ use Illuminate\Http\Request;
 
 //Домашняя страница
 Route::get('/', function () {
-    return view('home');
+    $ads = \App\Ad::orderBy('created_at', 'desc')->paginate(5);
+    return view('home', ['ads' => $ads]);
 })->name('home');
-
-//Добавление объявления
-Route::get('/edit', function () {
-    return view('home');
-})->middleware('auth');
 
 //Авторизация и регистрация
 Route::post('login', function(Request $request) {;
@@ -41,3 +37,12 @@ Route::get('logout', function() {
    Auth::logout();
    return redirect()->intended('/');
 });
+
+//Страница объявления
+Route::get('/{id}', 'AdController@show')->where('id', '[0-9]+');
+
+//Форма добавления объявления
+Route::get('/edit', 'AdController@edit')->middleware('auth');
+
+//Добавление объявления
+Route::post('/add', 'AdController@add')->middleware('auth');
