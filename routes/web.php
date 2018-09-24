@@ -16,7 +16,8 @@ use Illuminate\Http\Request;
 
 //Домашняя страница
 Route::get('/', function () {
-    return view('home');
+    $ads = \App\Ad::orderBy('created_at', 'desc')->paginate(5);
+    return view('home', ['ads' => $ads]);
 })->name('home');
 
 //Авторизация и регистрация
