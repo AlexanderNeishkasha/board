@@ -19,11 +19,6 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-//Добавление объявления
-Route::get('/edit', function () {
-    return view('edit');
-})->middleware('auth');
-
 //Авторизация и регистрация
 Route::post('login', function(Request $request) {;
     //Если пользователя не существует - зарегистрировать его
@@ -41,3 +36,14 @@ Route::get('logout', function() {
    Auth::logout();
    return redirect()->intended('/');
 });
+
+
+//Форма добавления объявления
+Route::get('/edit', function () {
+    return view('edit');
+})->middleware('auth');
+
+//Добавление объявления
+Route::post('/add', function(Request $request) {
+
+})->middleware('auth');
