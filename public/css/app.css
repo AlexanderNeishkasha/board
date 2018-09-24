@@ -10471,6 +10471,15 @@ a.text-dark:focus {
   }
 }
 
+.row {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.btn-primary {
+  color: white;
+}
+
 .ad {
   border-radius: .25rem;
   border: 1px solid #eee;
@@ -10516,8 +10525,6 @@ a.text-dark:focus {
 }
 
 .user {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
   border: 1px solid #eee;
 }
 
@@ -10552,5 +10559,9 @@ a.text-dark:focus {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+}
+
+.edit .form-control {
+  resize: none;
 }
 

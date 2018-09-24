@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 //Добавление объявления
 Route::get('/edit', function () {
-    return view('home');
+    return view('edit');
 })->middleware('auth');
 
 //Авторизация и регистрация
