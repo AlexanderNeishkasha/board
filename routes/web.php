@@ -26,20 +26,13 @@ Route::get('/edit', function () {
 
 //Авторизация и регистрация
 Route::post('login', function(Request $request) {
-    if (App\User::where('name', $request->input('username'))->count() == 0) {
-        //Пользователя не существует - зарегистрировать нового
-        return app('App\Http\Controllers\Auth\RegisterController')->create([
-            'name' => $request->input('username'),
-            'password' => $request->input('password')
-        ]);
-    } else {
-        //Пользователь существует - попытаться авторизовать его
-        Auth::attempt([
-            'name' => $request->input('username'),
-            'password' => $request->input('password')
-        ]);
-        return redirect('home');
-    }
-});
 
-//Auth::routes();
+    //Если пользователя не существует - зарегистрировать его
+    if (\App\User::where('name', $request->input('username'))->count() == 0)
+        App::call('App\Http\Controllers\Auth\RegisterController@register');
+    Auth::attempt([
+        'name' => $request->input('name'),
+        'password' => $request->input('password')
+    ]);
+    return redirect()->intended('/');
+});

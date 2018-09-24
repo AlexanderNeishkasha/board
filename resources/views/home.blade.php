@@ -12,11 +12,6 @@
         <div class="container">
             <div class="row">
                 <main class="col-8">
-                    <div class="controls">
-                        <a href="/edit" class="btn btn-primary controls_item">
-                            Create Ad
-                        </a>
-                    </div>
                     <div class="ads">
                         <div class="ad">
                             <h3 class="ad_title">
@@ -108,7 +103,7 @@
                         {{ csrf_field() }}
                         <div class="form-group">
                             <label for="username">Username</label>
-                            <input type="text" class="form-control" id="username" name="username">
+                            <input type="text" class="form-control" id="username" name="name">
                             <small id="username_error" class="form-text text-danger"></small>
                         </div>
                         <div class="form-group">
