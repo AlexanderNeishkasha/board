@@ -1,8 +1,26 @@
 .user {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
+  background-color: white;
+  padding: 15px;
 
   .btn {
     color: white;
+  }
+
+  &#{--info} {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    text-align: center;
+  }
+
+  &#{_name} {
+    margin-bottom: 20px;
+  }
+
+  &#{_actions} {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
   }
 }

@@ -10471,14 +10471,27 @@ a.text-dark:focus {
   }
 }
 
+.row {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.btn-primary {
+  color: white;
+}
+
 .ad {
   border-radius: .25rem;
-  border: 1px solid #eee;
+  border-left-style: solid;
   border-left-width: .25rem;
   border-left-color: #5bc0de;
   padding: 1.25rem;
-  margin-top: 1.25rem;
   margin-bottom: 1.25rem;
+  background-color: white;
+}
+
+.ad:not(:first-child) {
+  margin-top: 1.25rem;
 }
 
 .ad_title {
@@ -10506,6 +10519,10 @@ a.text-dark:focus {
   margin-right: 10px;
 }
 
+.ad_controls_item {
+  margin-right: 10px;
+}
+
 .controls {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
@@ -10516,11 +10533,73 @@ a.text-dark:focus {
 }
 
 .user {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
+  background-color: white;
+  padding: 15px;
 }
 
 .user .btn {
   color: white;
+}
+
+.user--info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 15px;
+  text-align: center;
+}
+
+.user_name {
+  margin-bottom: 20px;
+}
+
+.user_actions {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.edit {
+  padding: 15px;
+  background-color: white;
+}
+
+.edit .form-control {
+  resize: none;
+}
+
+.adpage {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  background-color: white;
+  padding: 15px;
+}
+
+.adpage_title {
+  color: #5bc0de;
+}
+
+.adpage_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.8em;
+  margin-top: 10px;
+  color: #6c757d;
+}
+
+.adpage_info .created {
+  margin-right: 10px;
 }
 

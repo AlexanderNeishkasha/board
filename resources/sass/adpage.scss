@@ -1,0 +1,21 @@
+.adpage {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  background-color: white;
+  padding: 15px;
+
+  &#{_title} {
+    color: $blue;
+  }
+
+  &#{_info} {
+    display: flex;
+    font-size: 0.8em;
+    margin-top: 10px;
+    color: $text-muted;
+
+    .created {
+      margin-right: 10px;
+    }
+  }
+}
