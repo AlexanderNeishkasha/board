@@ -10519,6 +10519,10 @@ a.text-dark:focus {
   margin-right: 10px;
 }
 
+.ad_controls_item {
+  margin-right: 10px;
+}
+
 .controls {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
