@@ -32,4 +32,9 @@ class AdController extends Controller
         ]);
         return redirect("/{$ad->id}");
     }
+
+    public function remove($id) {
+        Ad::destroy($id);
+        return redirect()->intended('/');
+    }
 }

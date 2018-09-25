@@ -22,6 +22,11 @@
                                     {{ $ad->author_name }}
                                 </div>
                             </div>
+                            @if (Auth::check() && $ad->author_name == Auth::user()->name)
+                                <div class="ad_controls">
+                                    <a href="/remove/{{ $ad->id }}" class="ad_controls_remove">Удалить</a>
+                                </div>
+                            @endif
                         </div>
                     @endforeach
                 </div>
