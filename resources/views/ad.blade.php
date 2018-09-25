@@ -5,7 +5,7 @@
         <li class="breadcrumb-item"><a href="/">Home</a></li>
     </ol>
 </nav>
-<div class="adpage">
+<div class="adpage shadow">
     <h1 class="adpage_title">{{ $ad->title }}</h1>
     <div class="adpage_desc">
         {{ $ad->description }}
@@ -16,5 +16,11 @@
         </div>
         <div class="author">{{ $ad->author_name }}</div>
     </div>
+    @if (Auth::check() && $ad->author_name == Auth::user()->name)
+        <div class="ad_controls">
+            <a href="/edit/{{ $ad->id }}" class="ad_controls_item">Edit</a>
+            <a href="/remove/{{ $ad->id }}" class="ad_controls_item">Remove</a>
+        </div>
+    @endif
 </div>
 @endsection

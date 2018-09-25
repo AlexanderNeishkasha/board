@@ -5,7 +5,7 @@
         <li class="breadcrumb-item"><a href="/">Home</a></li>
    </ol>
 </nav>
-<form action="/add" class="edit" method="post">
+<form action="/add" class="edit shadow" method="post">
     @csrf
 
     <div class="form-group">

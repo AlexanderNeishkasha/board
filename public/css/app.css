@@ -10482,12 +10482,16 @@ a.text-dark:focus {
 
 .ad {
   border-radius: .25rem;
-  border: 1px solid #eee;
+  border-left-style: solid;
   border-left-width: .25rem;
   border-left-color: #5bc0de;
   padding: 1.25rem;
-  margin-top: 1.25rem;
   margin-bottom: 1.25rem;
+  background-color: white;
+}
+
+.ad:not(:first-child) {
+  margin-top: 1.25rem;
 }
 
 .ad_title {
@@ -10525,7 +10529,8 @@ a.text-dark:focus {
 }
 
 .user {
-  border: 1px solid #eee;
+  background-color: white;
+  padding: 15px;
 }
 
 .user .btn {
@@ -10561,6 +10566,11 @@ a.text-dark:focus {
           align-items: flex-end;
 }
 
+.edit {
+  padding: 15px;
+  background-color: white;
+}
+
 .edit .form-control {
   resize: none;
 }
@@ -10568,6 +10578,8 @@ a.text-dark:focus {
 .adpage {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
+  background-color: white;
+  padding: 15px;
 }
 
 .adpage_title {

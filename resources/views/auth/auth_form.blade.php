@@ -1,4 +1,4 @@
-<form action="/login" class="user" method="post">
+<form action="/login" class="user shadow" method="post">
     @csrf
 
     <div class="form-group">

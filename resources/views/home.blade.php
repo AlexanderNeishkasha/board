@@ -2,7 +2,7 @@
 @section('content')
 <div class="ads">
     @foreach ($ads as $ad)
-        <div class="ad">
+        <div class="ad shadow">
             <h3 class="ad_title">
                 <a href="/{{ $ad->id }}" class="ad_link">
                     {{ $ad->title }}
