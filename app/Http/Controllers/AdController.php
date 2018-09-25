@@ -9,7 +9,8 @@ use Illuminate\Support\Facades\Auth;
 
 class AdController extends Controller
 {
-    public function edit() {
+    public function edit($id = null) {
+        if (isset($id) && $ad = Ad::find($id)) return view('edit', ['ad' => $ad]);
         return view('edit');
     }
 
@@ -23,7 +24,7 @@ class AdController extends Controller
     public function add(Request $request) {
         $this->validate($request, [
             'title' => 'required|max:255',
-            'description' => 'required'
+            'description' => 'required|max:500'
         ]);
         $ad = Ad::create([
             'title' => $request->input('title'),
@@ -36,5 +37,14 @@ class AdController extends Controller
     public function remove($id) {
         Ad::destroy($id);
         return redirect()->intended('/');
+    }
+
+    public function editad(Request $request, $id) {
+        $ad = Ad::find($id);
+        $ad->title = $request->input('title');
+        $ad->description = $request->input('description');
+        $ad->updated_at = time();
+        $ad->save();
+        return redirect("/{$ad->id}");
     }
 }
