@@ -22,7 +22,7 @@
             @if (Auth::check() && $ad->author_name == Auth::user()->name)
                 <div class="ad_controls">
                     <a href="/edit/{{ $ad->id }}" class="ad_controls_item">Edit</a>
-                    <a href="/remove/{{ $ad->id }}" class="ad_controls_item">Remove</a>
+                    <a href="/delete/{{ $ad->id }}" class="ad_controls_item">Remove</a>
                 </div>
             @endif
         </div>

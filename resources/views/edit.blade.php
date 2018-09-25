@@ -51,7 +51,7 @@
     <div class="edit_buttons">
         <button type="submit" class="btn btn-primary">
             @if (isset($ad))
-                Edit
+                Save
             @else
                 Create
             @endif

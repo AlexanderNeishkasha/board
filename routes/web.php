@@ -48,7 +48,7 @@ Route::get('/edit', 'AdController@edit')->middleware('auth');
 Route::post('/add', 'AdController@add')->middleware('auth');
 
 //Удаление объявления
-Route::get('/remove/{id}', 'AdController@remove')->middleware('auth', 'check_author');
+Route::get('/delete/{id}', 'AdController@remove')->middleware('auth', 'check_author');
 
 //Форма редактирования объявления
 Route::get('/edit/{id}', 'AdController@edit')->middleware('auth', 'check_author');
