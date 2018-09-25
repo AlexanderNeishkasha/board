@@ -9,6 +9,19 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
-@yield('content')
+<div class="container">
+    <div class="row">
+        <main class="col-8">
+            @yield('content')
+        </main>
+        <aside class="col-4">
+            @guest
+                @include('auth.auth_form')
+            @else
+                @include('user.info')
+            @endguest
+        </aside>
+    </div>
+</div>
 </body>
 </html>
