@@ -11,10 +11,10 @@
 <body>
 <div class="container">
     <div class="row">
-        <main class="col-8">
+        <main class="col-12 col-lg-8">
             @yield('content')
         </main>
-        <aside class="col-4">
+        <aside class="col-12 col-lg-4">
             @guest
                 @include('auth.auth_form')
             @else
